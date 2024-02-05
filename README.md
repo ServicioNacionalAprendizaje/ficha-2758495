@@ -99,8 +99,7 @@ Este modelo de relaciones representa una estructura básica para un sistema de g
 ``
 
 # Enlace de repositorio de la ficha
-- https://github.com/ServicioNacionalAprendizaje/ficha-2758495-backend.git
-- https://github.com/ServicioNacionalAprendizaje/ficha-2758495-frontend.git
+https://github.com/ServicioNacionalAprendizaje/ficha-2758495.git
 
 
 # Comandos a tener en cuenta
