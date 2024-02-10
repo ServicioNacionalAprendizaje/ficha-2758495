@@ -26,6 +26,9 @@ public class Cliente {
 	
 	@Column(name = "telefono", length = 15, nullable = false)
 	private String telefono;
+	
+	@Column(name = "estado", nullable = false)
+	private Boolean estado;
 
 	public Long getId() {
 		return id;
@@ -65,5 +68,13 @@ public class Cliente {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
-	}	
+	}
+
+	public Boolean getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Boolean estado) {
+		this.estado = estado;
+	}
 }

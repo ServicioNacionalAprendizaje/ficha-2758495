@@ -44,7 +44,7 @@ public class ClienteService implements IClienteService{
 					updateCliente.setApellido(cliente.getApellido());
 					updateCliente.setCorreo(cliente.getCorreo());
 					updateCliente.setTelefono(cliente.getTelefono());			
-					
+					updateCliente.setEstado(cliente.getEstado());
 					repository.save(updateCliente);
 				}	
 		
