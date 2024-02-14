@@ -28,6 +28,12 @@ public class Producto {
 	
 	@Column(name = "stock", nullable = false)
 	private Integer stock;
+	
+	@Column(name = "estado", nullable = false)
+	private Boolean estado;
+	
+	@Column(name = "imagen", nullable = false, columnDefinition = "TEXT")
+    private String imagen;
 
 	public Long getId() {
 		return id;
@@ -67,5 +73,21 @@ public class Producto {
 
 	public void setStock(Integer stock) {
 		this.stock = stock;
+	}
+
+	public Boolean getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Boolean estado) {
+		this.estado = estado;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}		
 }

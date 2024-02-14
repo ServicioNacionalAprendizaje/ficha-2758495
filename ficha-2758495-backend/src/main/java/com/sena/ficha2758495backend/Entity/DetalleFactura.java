@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "factura_detalle")
-public class FacturaDetalle {
+public class DetalleFactura {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,6 +33,9 @@ public class FacturaDetalle {
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name = "factura_id", nullable = false)
 	private Factura facturaId;
+	
+	@Column(name = "estado", nullable = false)
+	private Boolean estado;
 
 	public Long getId() {
 		return id;
@@ -72,5 +75,13 @@ public class FacturaDetalle {
 
 	public void setFacturaId(Factura facturaId) {
 		this.facturaId = facturaId;
+	}
+
+	public Boolean getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Boolean estado) {
+		this.estado = estado;
 	}		
 }

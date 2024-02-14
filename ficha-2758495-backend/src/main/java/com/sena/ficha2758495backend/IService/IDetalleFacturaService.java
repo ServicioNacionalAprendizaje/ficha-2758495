@@ -3,21 +3,21 @@ package com.sena.ficha2758495backend.IService;
 import java.util.List;
 import java.util.Optional;
 
-import com.sena.ficha2758495backend.Entity.FacturaDetalle;
+import com.sena.ficha2758495backend.Entity.DetalleFactura;
 
-public interface IFacturaDetalleService {
+public interface IDetalleFacturaService {
 	
 	//Recuperar todos los datos de la entidad
-	List<FacturaDetalle> All();
+	List<DetalleFactura> All();
 	
 	//Consultar registro por ID
-	Optional<FacturaDetalle> findById(Long id);
+	Optional<DetalleFactura> findById(Long id);
 	
 	//Guardar registro de la entidad
-	FacturaDetalle Save(FacturaDetalle facturaDetalle);
+	DetalleFactura Save(DetalleFactura facturaDetalle);
 	
 	//Modificar el registro de cliente
-	void Update (FacturaDetalle facturaDetalle, Long id);
+	void Update (DetalleFactura facturaDetalle, Long id);
 	
 	//Eliminar registro
 	void Delete (Long id);

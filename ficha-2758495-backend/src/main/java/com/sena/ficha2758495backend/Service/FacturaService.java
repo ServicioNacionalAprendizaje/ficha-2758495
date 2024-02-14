@@ -43,7 +43,8 @@ public class FacturaService implements IFacturaService{
 					Factura updateFactura = op.get();					
 					updateFactura.setFecha(LocalDateTime.now());
 					updateFactura.setTotalPagar(factura.getTotalPagar());
-					updateFactura.setClienteId(factura.getClienteId());					
+					updateFactura.setClienteId(factura.getClienteId());	
+					updateFactura.setEstado(factura.getEstado());	
 					repository.save(updateFactura);
 				}	
 		

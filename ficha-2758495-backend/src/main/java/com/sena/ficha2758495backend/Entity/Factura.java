@@ -30,6 +30,9 @@ public class Factura {
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name = "cliente_id", nullable = false)
 	private Cliente clienteId;
+	
+	@Column(name = "estado", nullable = false)
+	private Boolean estado;
 
 	public Long getId() {
 		return id;
@@ -61,5 +64,14 @@ public class Factura {
 
 	public void setClienteId(Cliente clienteId) {
 		this.clienteId = clienteId;
-	}	
+	}
+
+	public Boolean getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Boolean estado) {
+		this.estado = estado;
+	}		
+	
 }
