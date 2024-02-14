@@ -29,15 +29,14 @@ function All() {
 
 function FindById(id) {
     $.ajax({
-        url: 'http://localhost:9000/movil/api/Cliente/' + id,
+        url: 'http://localhost:9000/movil/api/Factura/' + id,
         type: 'GET',
         dataType: 'json',
         success: function (data) {
             $('#id').val(data.id);
-            $('#nombre').val(data.nombre);
-            $('#apellido').val(data.apellido);
-            $('#correo').val(data.correo);
-            $('#telefono').val(data.telefono);
+            $('#fecha').val(new Date(data.fecha).toISOString().split('T')[0]);
+            $('#totalPagar').val(data.totalPagar);
+            $('#clienteId').val(data.clienteId.id);
             $('#estado').val((data.estado == true ? 1 : 0));
 
              // Cambiar el evento onclick y el valor del botón
@@ -51,10 +50,10 @@ function FindById(id) {
 
 function Delete(id) {
     $.ajax({
-        url: 'http://localhost:9000/movil/api/Cliente/' + id,
+        url: 'http://localhost:9000/movil/api/Factura/' + id,
         type: 'DELETE',
         success: function (data) {
-            alert('Cliente eliminado');
+            alert('Factura eliminado');
             //SweeAlert
             All();
         },
@@ -90,14 +89,15 @@ function Save() {
 
 function Update() {
     parametros = {
-        "nombre": $('#nombre').val(),
-        "apellido": $('#apellido').val(),
-        "correo": $('#correo').val(),
-        "telefono": $('#telefono').val(),
+        "fecha": new Date($('#fecha').val()),
+        "totalPagar": parseFloat($('#totalPagar').val()),
+        "clienteId":{
+            "id": $('#clienteId').val()
+        },
         "estado": parseInt($('#estado').val())
     };
     $.ajax({
-        url: 'http://localhost:9000/movil/api/Cliente/'+$('#id').val(),
+        url: 'http://localhost:9000/movil/api/Factura/'+$('#id').val(),
         method: 'PUT', 
         contentType: 'application/json',
         data: JSON.stringify(parametros),
@@ -113,10 +113,9 @@ function Update() {
 
 function CleanData() {
     $('#id').val('');
-    $('#nombre').val('');
-    $('#apellido').val('');
-    $('#correo').val('');
-    $('#telefono').val('');
+    $('#fecha').val('');
+    $('#totalPagar').val('');
+    $('#clienteId').val('');
     $('#estado').val('');
     $("#botones input").attr("onclick", "Save()").val("Guardar");
 }

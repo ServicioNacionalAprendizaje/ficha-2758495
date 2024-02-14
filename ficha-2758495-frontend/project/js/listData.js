@@ -5,7 +5,7 @@ function ListCliente() {
         dataType: 'json',
         success: function (data) {
             // Itera sobre los datos obtenidos
-            var listData = ``;
+            var listData = `<option value="" selected="selected" disabled>--Seleccionado--</option>`;
             $.each(data, function (index, cliente) {
                 listData += `<option value="` + cliente.id + `">` + cliente.nombre + ` `+cliente.apellido+`</option>`;
             });
