@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Factura</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- css nativio -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../../asset/css/global.css'>
+
+    <!-- Librería de bootstrap -->
+    <link rel='stylesheet' type='text/css' media='screen'
+        href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+
+    <!-- Librería de ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- js de Factura -->
+    <script src='../../js/factura.js'></script>
+    <script src='../../js/listData.js'></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Parte 1: Card del título -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Gestión de Facturas</h5>
+            </div>
+        </div>
+
+        <!-- Parte 2: Campos de entrada de datos -->
+        <form id="FacturaForm">
+            <input type="hidden" id="id">
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" class="form-control" id="fecha">
+            </div>
+            <div class="form-group">
+                <label for="totalPagar">Total Pagar:</label>
+                <input type="text" class="form-control" id="totalPagar">
+            </div>
+            <div class="form-group">
+                <label for="cliente">Cliente:</label>
+                <select class="form-control" id="clienteId">                    
+                    <!-- Datos llegan de la base de datos -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select class="form-control" id="estado">
+                    <option value="" selected="selected" disabled>--Seleccionado--</option>
+                    <option value="0">Inactivo</option>
+                    <option value="1">Activo</option>
+                </select>
+            </div>
+        </form>
+
+        <!-- Parte 3: Botón de Guardar -->
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" onclick="Save()">Guardar</button>
+        </div>
+
+        <!-- Parte 4: Datatable -->
+        <div class="table-responsive">
+            <table class="table" id="FacturaTable">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Total Pagar</th>
+                        <th>Cliente</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                    <!-- Aquí se generarán dinámicamente las filas de la tabla -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    All();
+    ListCliente();
+</script>
