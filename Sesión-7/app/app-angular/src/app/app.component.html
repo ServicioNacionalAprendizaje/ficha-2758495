@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cliente</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Estilos Bootstrap -->
+    <link rel='stylesheet' type='text/css' media='screen'
+        href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+
+    <!-- Librería de ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- js de Cliente -->
+    <script src='../../js/cliente.js'></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Parte 1: Card del título -->
+        <div class="card">
+            <div class="card-body">
+                <h3 class=" title">{{title}}</h3>
+                <h5 class="card-title">Gestión de clientes</h5>
+            </div>
+        </div>
+
+        <!-- Parte 2: Campos de entrada de datos -->
+        <form id="clienteForm">
+            <input type="hidden" id="id">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" class="form-control" id="apellido">
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" class="form-control" id="correo">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="number" class="form-control" id="telefono">
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select class="form-control" id="estado">
+                    <option value="" selected="selected" disabled>--Seleccionado--</option>
+                    <option value="0">Inactivo</option>
+                    <option value="1">Activo</option>
+                </select>
+            </div>
+        </form>
+
+        <!-- Parte 3: Botón de Guardar -->
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" onclick="Save()">Guardar</button>
+        </div>
+
+        <!-- Parte 4: Datatable -->
+        <div class="table-responsive">
+            <table class="table" id="clienteTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                    <!-- Aquí se generarán dinámicamente las filas de la tabla -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+      <h6 class=" title"><i>{{title}}</i></h6>
+    </div>
+</body>
+
+</html>
+<script>
+    All();
+</script>

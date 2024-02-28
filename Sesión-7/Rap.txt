@@ -1,0 +1,18 @@
+[16:32] miguel
+ 
+Construir sitios web según técnicas de interoperabilidad y protocolos técnicos	220501123-01 MODELAR LA ARQUITECTURA TECNOLÓGICA DE LA APLICACIÓN MÓVIL HIBRIDA SEGÚN INFORME DE ANÁLISIS Y CRITERIOS TÉCNICOS.	POR EVALUAR
+Construir sitios web según técnicas de interoperabilidad y protocolos técnicos	220501123-02- DISEÑAR LA MAQUETACIÓN DE LA APLICACIÓN MÓVIL HIBRIDA DE ACUERDO CON LAS NECESIDADES DEL USUARIO Y CLIENTE.	POR EVALUAR
+Construir sitios web según técnicas de interoperabilidad y protocolos técnicos	220501123-03- CONSTRUIR LA APLICACIÓN MÓVIL HIBRIDA DE ACUERDO A LA ARQUITECTURA DEFINIDA Y CRITERIOS TÉCNICOS.	POR EVALUAR
+ 
+[16:33] miguel
+ 
+Construir sitios web según técnicas de interoperabilidad y protocolos técnicos	220501123-04- IMPLANTAR LA APLICACIÓN MÓVIL HIBRIDA DE ACUERDO CON LAS NECESIDADES TECNOLÓGICAS Y CRITERIOS TÉCNICOS.	POR EVALUAR
+ 
+Diseñar aplicaciones móviles de acuerdo con patrones y procedimientos técnicos	220501112-01 MODELAR LA ARQUITECTURA TECNOLÓGICA DE LA APLICACIÓN MÓVIL NATIVA SEGÚN INFORME DE ANÁLISIS Y CRITERIOS TÉCNICOS.	POR EVALUAR
+Diseñar aplicaciones móviles de acuerdo con patrones y procedimientos técnicos	220501112-02- DISEÑAR LA MAQUETACIÓN DE LA APLICACIÓN MÓVIL NATIVA DE ACUERDO CON LAS NECESIDADES DEL USUARIO Y CLIENTE.	POR EVALUAR
+ 
+[16:34] miguel
+ 
+Diseñar aplicaciones móviles de acuerdo con patrones y procedimientos técnicos	220501112-03- CONSTRUIR LA APLICACIÓN MÓVIL NATIVA DE ACUERDO A LA ARQUITECTURA DEFINIDA.	POR EVALUAR
+Diseñar aplicaciones móviles de acuerdo con patrones y procedimientos técnicos	220501112-04- IMPLANTAR LA APLICACIÓN MÓVIL NATIVA DE ACUERDO CON LAS NECESIDADES TECNOLÓGICAS Y CRITERIOS TÉCNICOS.	POR EVALUAR
+ 
